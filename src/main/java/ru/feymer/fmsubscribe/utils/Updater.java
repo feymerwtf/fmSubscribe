@@ -90,17 +90,17 @@ public class Updater {
         if (this.checkForUpdates()) {
             String newVersion = this.latestVersion;
 
-            Bukkit.getConsoleSender().sendMessage(Hex.color("&6"));
-            Bukkit.getConsoleSender().sendMessage(Hex.color("&6» &fНайдена новая версия плагина: &6v" + newVersion));
-            Bukkit.getConsoleSender().sendMessage(Hex.color("&6» &fСкачайте ее по ссылке: &6" + resourceURL));
-            Bukkit.getConsoleSender().sendMessage(Hex.color("&6"));
+            Bukkit.getConsoleSender().sendMessage(Hex.color("&a"));
+            Bukkit.getConsoleSender().sendMessage(Hex.color("&a» &fНайдена новая версия плагина: &av" + newVersion));
+            Bukkit.getConsoleSender().sendMessage(Hex.color("&a» &fСкачайте ее по ссылке: &a" + resourceURL));
+            Bukkit.getConsoleSender().sendMessage(Hex.color("&a"));
 
         } else {
 
-            Bukkit.getConsoleSender().sendMessage(Hex.color("&6"));
-            Bukkit.getConsoleSender().sendMessage(Hex.color("&6» &fОбновления не найдены!"));
-            Bukkit.getConsoleSender().sendMessage(Hex.color("&6» &fВы используете последнюю версию плагина - &6v" + latestVersion));
-            Bukkit.getConsoleSender().sendMessage(Hex.color("&6"));
+            Bukkit.getConsoleSender().sendMessage(Hex.color("&a"));
+            Bukkit.getConsoleSender().sendMessage(Hex.color("&a» &fОбновления не найдены!"));
+            Bukkit.getConsoleSender().sendMessage(Hex.color("&a» &fВы используете последнюю версию плагина - &av" + latestVersion));
+            Bukkit.getConsoleSender().sendMessage(Hex.color("&a"));
 
         }
 

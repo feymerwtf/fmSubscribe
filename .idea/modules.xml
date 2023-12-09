@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/fmSubscribe.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fmSubscribe.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ru.feymer.fmSubscribe.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ru.feymer.fmSubscribe.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Бесплатные плагины.fmSubscribe.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Бесплатные плагины.fmSubscribe.main.iml" />
     </modules>
   </component>
 </project>
