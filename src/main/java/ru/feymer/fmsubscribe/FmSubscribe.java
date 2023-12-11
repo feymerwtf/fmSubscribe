@@ -1,7 +1,6 @@
 package ru.feymer.fmsubscribe;
 
 import me.clip.placeholderapi.PlaceholderAPI;
-import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import net.milkbowl.vault.chat.Chat;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.RegisteredServiceProvider;
@@ -27,12 +26,12 @@ public final class FmSubscribe extends JavaPlugin {
         this.getCommand("fmsubscribe").setTabCompleter(new FmSubscribeTabCompleter());
         this.saveDefaultConfig();
         Data.load();
+        Updater updater = new Updater(this);
+        updater.start();
         PlaceholderAPI.registerPlaceholderHook("fmsubscribe", new Placeholders());
         (new Placeholders()).register();
         Clear clear = new Clear();
         clear.runTaskTimerAsynchronously(FmSubscribe.getInstance(), 0, 60);
-        Updater updater = new Updater(this);
-        updater.start();
     }
 
     public void onDisable() {

@@ -76,12 +76,12 @@ public class Updater {
                     return false;
                 }
             }
-        } catch (NumberFormatException | ArrayIndexOutOfBoundsException var18) {
-            Bukkit.getConsoleSender().sendMessage(Hex.color("&fПроизошла ошибка при проверке наличия обновлений: &6" + var18.getMessage()));
+        } catch (NumberFormatException | ArrayIndexOutOfBoundsException error) {
+            Bukkit.getConsoleSender().sendMessage(Hex.color("&fПроизошла ошибка при проверке наличия обновлений: &6" + error.getMessage()));
             return false;
-        } catch (Exception var19) {
+        } catch (Exception error) {
             Bukkit.getConsoleSender().sendMessage(Hex.color("&fНе могу проверить наличие обновлений!"));
-            var19.printStackTrace();
+            error.printStackTrace();
             return false;
         }
     }

@@ -63,8 +63,8 @@ public class FmSubscribeCommand implements CommandExecutor {
                         for (String commands : Utils.getStringList("settings.commands-on-give")) {
                             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), commands.replace("%player%", player.getName()));
                         }
-
-                        chat.setPlayerPrefix(player, Utils.getString("settings.prefix-1").replace("%prefix%", prefix).replace("%symbol%", symbol));
+                        //chat.setPlayerPrefix("none", player, Utils.getString("settings.prefix-1").replace("%prefix%", prefix).replace("%symbol%", symbol));
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "lp user " + player.getName() + " meta setprefix \"" + Utils.getString("settings.prefix-1").replace("%prefix%", prefix).replace("%symbol%", symbol));
                         Data.setData(player, newData);
                         if (args[2].equalsIgnoreCase("forever")) {
                             Utils.sendMessage(sender, Utils.getString("messages.give-forever").replace("%player%", player.getName()));
@@ -103,7 +103,8 @@ public class FmSubscribeCommand implements CommandExecutor {
                         int symbol_lenght = Utils.getString("settings.symbol").length();
                         prefix = prefix.substring(0, prefix.length() - symbol_lenght);
                         Data.removeData(player);
-                        chat.setPlayerPrefix(player, Utils.getString("settings.prefix-2").replace("%prefix%", prefix));
+                        //chat.setPlayerPrefix("none", player, Utils.getString("settings.prefix-2").replace("%prefix%", prefix));
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "lp user " + player.getName() + " meta setprefix \"" + Utils.getString("settings.prefix-2").replace("%prefix%", prefix));
                         Utils.sendMessage(sender, Utils.getString("messages.take").replace("%player%", player.getName()));
                         return true;
                     }
