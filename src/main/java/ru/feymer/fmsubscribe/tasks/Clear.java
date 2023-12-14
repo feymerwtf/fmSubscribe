@@ -37,7 +37,7 @@ public class Clear extends BukkitRunnable {
                         });
 
                         Data.removeData(player);
-                        chat.setPlayerPrefix(player, Utils.getString("settings.prefix-2").replace("%prefix%", prefix));
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "lp user " + player.getName() + " meta setprefix \"" + Utils.getString("settings.prefix-2").replace("%prefix%", prefix));
                     }
                 }
             }
